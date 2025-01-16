@@ -1,0 +1,22 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Match3.MainPage">
+    <Grid RowDefinitions="*,Auto" BackgroundColor="Black">
+        <!-- Game Grid -->
+        <Grid x:Name="GameGrid" RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*,*,*"
+              HorizontalOptions="Center" VerticalOptions="Center" />
+
+        <!-- Bottom StackLayout -->
+        <StackLayout Grid.Row="1" Padding="10" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label x:Name="ScoreLabel" Text="Score: 0" FontSize="20" TextColor="White" />
+            <Button 
+                x:Name="SurrenderBtn"
+                Text="Surrender"
+                FontSize="20"
+                BackgroundColor="Red"
+                TextColor="White" 
+                Clicked="OnSurrender"
+            />
+        </StackLayout>
+    </Grid>
+</ContentPage>

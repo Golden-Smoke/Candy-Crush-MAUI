@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Match3.MainMenuPage">
+    <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center" HorizontalOptions="Center">
+        <Label 
+            Text="Candy Crush Epic Remake"
+            FontSize="Header"
+            FontAttributes="Bold"
+            Margin="5"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button Text="Start" 
+                FontSize="24" 
+                BackgroundColor="LightBlue" 
+                TextColor="White"
+                Clicked="OnStartButtonClicked" />
+
+        <Button Text="Leaderboards" 
+                FontSize="24" 
+                TextColor="White"
+                Clicked="OnLeaderboardsButtonClicked" />
+
+        <Button Text="Exit" 
+                FontSize="24" 
+                BackgroundColor="Tomato" 
+                TextColor="White"
+                Clicked="OnExitButtonClicked" />
+    </VerticalStackLayout>
+</ContentPage>
