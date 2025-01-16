@@ -15,14 +15,12 @@ public partial class LeaderboardsPage : ContentPage
     {
         using (var dbContext = new AppDbContext(App.ServiceProvider.GetService<DbContextOptions<AppDbContext>>()))
         {
-            // Fetch leaderboard data (Top scores in descending order)
             var leaderboard = await dbContext.HighScores
                 .Include(h => h.Player)
                 .OrderByDescending(h => h.Score)
                 .Take(10)
                 .ToListAsync();
 
-            // Bind the fetched data to the CollectionView
             LeaderboardsCollection.ItemsSource = leaderboard;
         }
     }

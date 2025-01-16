@@ -26,7 +26,6 @@ namespace Match3
                 return;
             }
 
-            // Check if the username already exists in the database
             var existingPlayer = _dbContext.Players.FirstOrDefault(p => p.Username == username);
 
             if(existingPlayer == null)
